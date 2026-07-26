@@ -1,7 +1,7 @@
 package com.isaactoh.racefinder;
 
-import com.isaactoh.racefinder.dto.Coordinates;
-import com.isaactoh.racefinder.service.GeocodingService;
+import com.isaactoh.racefinder.geocoding.dto.Coordinates;
+import com.isaactoh.racefinder.geocoding.GeocodingService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
