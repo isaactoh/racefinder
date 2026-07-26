@@ -1,4 +1,4 @@
-package com.isaactoh.racefinder.dto;
+package com.isaactoh.racefinder.geocoding.google.dto;
 
 import java.util.List;
 
