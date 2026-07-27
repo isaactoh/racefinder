@@ -18,19 +18,13 @@ public class GoogleGeocodingClient implements GeocodingClient {
     public Coordinates geocode(String location) {
         var response = googleApiClient.geocode(location);
 
-        if (response == null
-                || response.results() == null
-                || response.results().isEmpty()) {
+        if (response.results().isEmpty()) {
             throw new LocationNotFoundException(location);
         }
 
-        var googleLocation = response.results()
-                .get(0)
-                .geometry()
-                .location();
+        var result = response.results().get(0);
+        var coordinates = result.geometry().location();
 
-        return new Coordinates(
-                googleLocation.lat(),
-                googleLocation.lng());
+        return new Coordinates(coordinates.lat(), coordinates.lng());
     }
 }
