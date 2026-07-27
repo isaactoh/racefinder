@@ -1,7 +1,7 @@
 package com.isaactoh.racefinder.exception;
 
-public class LocationNotFoundException extends RuntimeException {
+public class LocationNotFoundException extends GeocodingException {
     public LocationNotFoundException(String location) {
-        super("No coordinates found for location: " + location);
+        super("Location not found: " + location);
     }
 }
