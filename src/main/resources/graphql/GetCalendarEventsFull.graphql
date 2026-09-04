@@ -1,0 +1,147 @@
+query getCalendarEvents(
+    $startDate: String,
+    $endDate: String,
+    $query: String,
+    $regionType: String,
+    $regionId: Int,
+    $currentSeason: Boolean,
+    $disciplineId: Int,
+    $rankingCategoryId: Int,
+    $permitLevelId: Int,
+    $competitionGroupId: Int,
+    $competitionSubgroupId: Int,
+    $competitionGroupSlug: String,
+    $limit: Int, $offset: Int,
+    $showOptionsWithNoHits: Boolean,
+    $hideCompetitionsWithNoResults: Boolean,
+    $orderDirection: OrderDirectionEnum
+) {
+    getCalendarEvents(
+        startDate: $startDate,
+        endDate: $endDate,
+        query: $query,
+        regionType: $regionType,
+        regionId: $regionId,
+        currentSeason: $currentSeason,
+        disciplineId: $disciplineId,
+        rankingCategoryId: $rankingCategoryId,
+        permitLevelId: $permitLevelId,
+        competitionGroupId: $competitionGroupId,
+        competitionSubgroupId: $competitionSubgroupId,
+        competitionGroupSlug: $competitionGroupSlug,
+        limit: $limit,
+        offset: $offset,
+        showOptionsWithNoHits: $showOptionsWithNoHits,
+        hideCompetitionsWithNoResults: $hideCompetitionsWithNoResults,
+        orderDirection: $orderDirection
+    ){
+        hits
+        paginationPage
+        defaultOffset
+        options {
+            regions {
+                world {
+                    id
+                    name
+                    count
+                    __typename
+                }
+                area {
+                    id
+                    name
+                    count
+                    __typename
+                }
+                country {
+                    id
+                    name
+                    count
+                    __typename
+                }
+                __typename
+            }
+            disciplines {
+                id
+                name
+                count
+                __typename
+            }
+            rankingCategories {
+                id
+                name
+                count
+                __typename
+            }
+            disciplines {
+                id
+                name
+                count
+                __typename
+            }
+            permitLevels {
+                id
+                name
+                count
+                __typename
+            }
+            competitionGroups {
+                id
+                name
+                count
+                __typename
+            }
+            competitionSubgroups {
+                id
+                name
+                count
+                __typename
+            }
+            __typename
+        }
+        parameters {
+            startDate
+            endDate
+            query
+            regionType
+            regionId
+            disciplineId
+            rankingCategoryId
+            permitLevelId
+            competitionGroupId
+            competitionSubgroupId
+            limit
+            offset
+            showOptionsWithNoHits
+            hideCompetitionsWithNoResults
+            __typename
+        }
+        results {
+            id
+            iaafId
+            hasResults
+            hasApiResults
+            hasStartlist
+            name
+            venue
+            area
+            rankingCategory
+            disciplines
+            competitionGroup
+            competitionSubgroup
+            startDate
+            endDate
+            dateRange
+            hasCompetitionInformation
+            undeterminedCompetitionPeriod {
+                status
+                label
+                remark
+                __typename
+            }
+            season
+            wasUrl
+            __typename
+        }
+        __typename
+    }
+}

@@ -1,0 +1,16 @@
+query GetCalendarEvents($startDate: String, $endDate: String) {
+    getCalendarEvents(
+        startDate: $startDate,
+        endDate: $endDate
+    ) {
+        results {
+            id
+            name
+            startDate
+            endDate
+            area
+            venue
+            disciplines
+        }
+    }
+}
