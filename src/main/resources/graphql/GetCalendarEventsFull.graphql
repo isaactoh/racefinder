@@ -11,7 +11,8 @@ query getCalendarEvents(
     $competitionGroupId: Int,
     $competitionSubgroupId: Int,
     $competitionGroupSlug: String,
-    $limit: Int, $offset: Int,
+    $limit: Int,
+    $offset: Int,
     $showOptionsWithNoHits: Boolean,
     $hideCompetitionsWithNoResults: Boolean,
     $orderDirection: OrderDirectionEnum

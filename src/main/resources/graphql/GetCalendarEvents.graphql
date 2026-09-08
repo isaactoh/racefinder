@@ -1,4 +1,4 @@
-query GetCalendarEvents($startDate: String, $endDate: String) {
+query getCalendarEvents($startDate: String, $endDate: String) {
     getCalendarEvents(
         startDate: $startDate,
         endDate: $endDate
