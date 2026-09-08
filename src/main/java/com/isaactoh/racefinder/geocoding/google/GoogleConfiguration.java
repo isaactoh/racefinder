@@ -1,4 +1,4 @@
-package com.isaactoh.racefinder.config;
+package com.isaactoh.racefinder.geocoding.google;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -6,8 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestClient;
 
 @Configuration
-public class RestClientConfig {
-
+public class GoogleConfiguration {
     @Bean
     @Qualifier("googleMapsRestClient")
     public RestClient googleMapsRestClient() {
