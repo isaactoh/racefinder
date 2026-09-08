@@ -14,7 +14,7 @@ public record WorldAthleticsEventResponse(
     ) {}
 
     public record Result(
-            String id,
+            Integer id,
             String name,
             String startDate,
             String endDate,

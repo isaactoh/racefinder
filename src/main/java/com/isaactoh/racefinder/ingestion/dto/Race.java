@@ -2,8 +2,10 @@ package com.isaactoh.racefinder.ingestion.dto;
 
 import com.isaactoh.racefinder.geocoding.dto.Coordinates;
 
-public record Event(
-        String id,
+import java.time.Instant;
+
+public record Race(
+        Integer id,
         String name,
         String startDate,
         String endDate,
@@ -11,5 +13,8 @@ public record Event(
         String country,
         String venue,
         String discipline,
-        Coordinates coordinates
+        String events,
+        String website,
+        Coordinates coordinates,
+        Instant cachedAt
 ) {}

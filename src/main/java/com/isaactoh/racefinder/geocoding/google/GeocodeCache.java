@@ -1,4 +1,4 @@
-package com.isaactoh.racefinder.geocoding;
+package com.isaactoh.racefinder.geocoding.google;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
