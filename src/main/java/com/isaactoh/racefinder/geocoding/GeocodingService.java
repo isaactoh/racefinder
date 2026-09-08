@@ -1,6 +1,7 @@
 package com.isaactoh.racefinder.geocoding;
 
 import com.isaactoh.racefinder.geocoding.dto.Coordinates;
+import com.isaactoh.racefinder.geocoding.google.GeocodeCache;
 import com.isaactoh.racefinder.geocoding.google.GeocodeCacheRepository;
 import org.springframework.stereotype.Service;
 
