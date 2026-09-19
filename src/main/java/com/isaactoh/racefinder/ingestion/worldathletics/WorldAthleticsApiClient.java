@@ -26,6 +26,7 @@ public class WorldAthleticsApiClient {
         this.config = config;
     }
 
+    // TODO: add discipline id param to query only road running and track and field
     public WorldAthleticsEventResponse ingest(String startDate, String endDate) {
         Map<String, Object> variables = Map.of(
                 "startDate", startDate,

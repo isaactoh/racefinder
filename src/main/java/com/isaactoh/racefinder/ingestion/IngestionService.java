@@ -1,9 +1,11 @@
 package com.isaactoh.racefinder.ingestion;
 
-import com.isaactoh.racefinder.ingestion.dto.Race;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.time.LocalDate;
+import java.time.Year;
 
+@Service
 public class IngestionService {
     private final IngestionClient ingestionClient;
 
@@ -11,8 +13,12 @@ public class IngestionService {
         this.ingestionClient = ingestionClient;
     }
 
-    public List<Race> ingest(String startDate, String endDate) {
-        // TODO: call ingestionClient.ingest for current year + following year
-        return null;
+    public void ingest() {
+        int currentYear = Year.now().getValue();
+
+        String startDate = LocalDate.of(currentYear, 1, 1).toString();
+        String endDate = LocalDate.of(currentYear + 1, 12, 31).toString();
+
+        ingestionClient.ingest(startDate, endDate);
     }
 }
